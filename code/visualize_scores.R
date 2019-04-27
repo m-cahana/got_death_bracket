@@ -50,7 +50,7 @@ time_series <-
 		title = 'Week by Week Rankings',
 		color = 'Contestant') +
 	theme(plot.title = element_text(hjust = 0.5)) +
-	scale_x_continuous(breaks = seq(3, 5))
+	scale_x_continuous(breaks = seq(3, 6))
 
 #===========
 # save output

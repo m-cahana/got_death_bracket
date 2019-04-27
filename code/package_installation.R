@@ -1,6 +1,7 @@
 # Install necessary packages
 
-packages <- c('tidyverse', 'readxl', 'rmarkdown', 'knitr')
+packages <- c('tidyverse', 'readxl', 'rmarkdown', 'knitr', 'prettydoc', 
+	'plotly')
 
 check_install <- function(pkg){
 	if(!(pkg %in% installed.packages())){
