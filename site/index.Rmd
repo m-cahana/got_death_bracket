@@ -1,0 +1,40 @@
+---
+title: "Game of Thrones Death Bracket"
+output:
+  html_document:
+    df_print: paged
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+---
+
+
+```{r setup, warning = FALSE, message = FALSE, include = FALSE}
+
+#===========
+# standard setup
+#===========
+
+root <- getwd()
+while(basename(root) != "got_death_bracket") {
+  root <- dirname(root)
+}
+source(file.path(root, "data.R"))
+
+#===========
+# needed libraries
+#===========
+library(tidyverse)
+library(knitr)
+
+#===========
+# data read in
+#===========
+
+scores <- read_csv(file.path(results, 'scores.csv'))
+leaderboard <- read_csv(file.path(results, 'leaderboard.csv'))
+time_series <- file.path(results, 'time_series.png')
+
+```
+
+### Test
+`r kable(leaderboard, caption = 'test')` 
+`r include_graphics(time_series)`

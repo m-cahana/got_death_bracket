@@ -1,6 +1,6 @@
 # Install necessary packages
 
-packages <- c('tidyverse')
+packages <- c('tidyverse', 'readxl', 'rmarkdown', 'knitr')
 
 check_install <- function(pkg){
 	if(!(pkg %in% installed.packages())){
