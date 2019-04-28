@@ -34,8 +34,10 @@ leaderboard <-
 	scores %>% 
 	group_by(contestant) %>% 
 	summarize(points = sum(points)) %>% 
-	arrange(points) %>% 
-	setNames(c('Contestant', 'Points')) 
+	arrange(desc(points)) %>% 
+	setNames(c('Contestant', 'Points')) %>% 
+	mutate(Position = row_number()) %>% 
+	select(Position, Contestant, Points)
 
 #===========
 # time series
@@ -43,7 +45,7 @@ leaderboard <-
 
 time_series <- 
 	scores %>% 
-	ggplot(aes(x = episode, y = points, color = contestant)) +
+	ggplot(aes(x = episode, y = cum_points, color = contestant)) +
 	geom_point() + 
 	geom_line() +
 	labs(x = 'Episode', y = 'Points', 

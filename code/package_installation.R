@@ -1,7 +1,7 @@
 # Install necessary packages
 
 packages <- c('tidyverse', 'readxl', 'rmarkdown', 'knitr', 'prettydoc', 
-	'plotly')
+	'plotly', 'fontawesome', 'kableExtra')
 
 check_install <- function(pkg){
 	if(!(pkg %in% installed.packages())){

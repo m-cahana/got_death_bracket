@@ -1,12 +1,10 @@
 ---
 title: "Game of Thrones Death Bracket"
+subtitle: "EPIC"
 output:
   prettydoc::html_pretty:
-    df_print: paged
-    theme: cayman
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+    theme: leonids
 ---
-
 
 ```{r setup, warning = FALSE, message = FALSE, include = FALSE}
 
@@ -26,6 +24,9 @@ source(file.path(root, "data.R"))
 library(tidyverse)
 library(knitr)
 library(plotly)
+library(fontawesome)
+library(kableExtra)
+options(knitr.table.format = "html") 
 
 #===========
 # data read in
@@ -35,12 +36,24 @@ scores <- read_csv(file.path(results, 'scores.csv'))
 leaderboard <- read_csv(file.path(results, 'leaderboard.csv'))
 time_series <- file.path(results, 'time_series.png')
 
+
 ```
 
-### Test
-`r kable(leaderboard, caption = 'test')` 
-`r include_graphics(time_series)`
+### The Results Are In...
+
+```{r, echo = FALSE}
+leaderboard %>% 
+	kable() %>%
+	kable_styling(full_width = F, position = "float_left")
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet mauris in ex ultricies elementum vel rutrum dolor. Phasellus tempor convallis dui, in hendrerit mauris placerat scelerisque. Maecenas a accumsan enim, a maximus velit. Pellentesque in risus eget est faucibus convallis nec at nulla. Phasellus nec lacinia justo. Morbi fermentum, orci id varius accumsan, nibh neque porttitor ipsum, consectetur luctus risus arcu ac ex. Aenean a luctus augue. Suspendisse et auctor nisl. Suspendisse cursus ultrices quam non vulputate. Phasellus et pharetra neque, vel feugiat erat. Sed feugiat elit at mauris commodo consequat. Sed congue lectus id mattis hendrerit. Mauris turpis nisl, congue eget velit sed, imperdiet convallis magna. Nam accumsan urna risus, non feugiat odio vehicula eget.
+
+<!-- `r include_graphics(time_series)` -->
 `r scores %>% 
-	setNames(c('Contestant', 'Episode', 'Points')) %>% 
-	plot_ly(x = ~Episode, y = ~Points, color = ~Contestant) %>% 
-	add_lines()`
+	setNames(c('Contestant', 'Episode', 'E_Points', 'Points')) %>% 
+	plot_ly(x = ~Episode, y = ~Points, color = ~Contestant, mode = 'lines+markers') %>% 
+	layout(xaxis = list(dtick = 1), title = 'Week by Week Rankings')
+`
+
+
+ `r fa("github", fill = "black")`  [View source code](https://github.com/m-cahana/got_death_bracket) 

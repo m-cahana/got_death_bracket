@@ -66,7 +66,8 @@ scores <-
 	filter(!is.na(outcome)) %>% 
 	mutate(points = if_else(prediction==outcome, 1, 0)) %>% 
 	group_by(contestant, episode) %>% 
-	summarize(points = sum(points, na.rm = T))
+	summarize(points = sum(points, na.rm = T)) %>% 
+	mutate(cum_points = cumsum(points))
 
 #===========
 # save outout
