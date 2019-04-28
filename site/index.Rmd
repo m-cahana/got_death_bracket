@@ -49,7 +49,9 @@ leaderboard %>%
 ```
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet mauris in ex ultricies elementum vel rutrum dolor. Phasellus tempor convallis dui, in hendrerit mauris placerat scelerisque. Maecenas a accumsan enim, a maximus velit. Pellentesque in risus eget est faucibus convallis nec at nulla. Phasellus nec lacinia justo. Morbi fermentum, orci id varius accumsan, nibh neque porttitor ipsum, consectetur luctus risus arcu ac ex. Aenean a luctus augue. Suspendisse et auctor nisl. Suspendisse cursus ultrices quam non vulputate. Phasellus et pharetra neque, vel feugiat erat. Sed feugiat elit at mauris commodo consequat. Sed congue lectus id mattis hendrerit. Mauris turpis nisl, congue eget velit sed, imperdiet convallis magna. Nam accumsan urna risus, non feugiat odio vehicula eget.
 
-<!-- `r include_graphics(time_series)` -->
+&nbsp;
+&nbsp;
+
 `r scores %>% 
 	setNames(c('Contestant', 'Episode', 'E_Points', 'Points')) %>% 
 	plot_ly(x = ~Episode, y = ~Points, color = ~Contestant, mode = 'lines+markers') %>% 
