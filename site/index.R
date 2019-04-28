@@ -19,4 +19,4 @@ library(rmarkdown)
 #===========
 
 render(file.path(root, 'site', 'index.Rmd'), 
-	output_file = file.path(root, 'site', 'index.html'))
+	output_file = file.path(root, 'index.html'))

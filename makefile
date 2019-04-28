@@ -22,7 +22,7 @@ results = $(DATA)/results
 
 INSTALL := $(shell Rscript $(CDIR)/package_installation.R)
 
-all : $(site)/index.html
+all : $(DIR)/index.html
 
 # ===========================================================================
 # Score brackets
@@ -47,7 +47,7 @@ $(results): \
 # Site
 # ===========================================================================
 
-$(site)/index.html: \
+$(DIR)/index.html: \
 	$(site)/index.R \
 	$(site)/index.Rmd \
 	$(results)
