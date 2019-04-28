@@ -1,6 +1,7 @@
 ---
 title: "Game of Thrones Death Bracket"
 subtitle: "EPIC"
+author: "[![](GitHub-Mark-32px.png)](https://github.com/m-cahana/got_death_bracket)"
 output:
   prettydoc::html_pretty:
     theme: leonids
@@ -54,6 +55,3 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet mauris in
 	plot_ly(x = ~Episode, y = ~Points, color = ~Contestant, mode = 'lines+markers') %>% 
 	layout(xaxis = list(dtick = 1), title = 'Week by Week Rankings')
 `
-
-
- `r fa("github", fill = "black")`  [View source code](https://github.com/m-cahana/got_death_bracket) 
