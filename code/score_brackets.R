@@ -29,9 +29,12 @@ source(file.path(root, "data.R"))
 character_outcomes <- read_excel(file.path(dropbox, 'master.xlsx'))
 bracket_predictions <- 
 	list.files(brackets, full.names = T) %>% 
-	map_df(read_excel)
+	.[!str_detect(., '~')] %>% 
+	map_df(read_excel) %>% 
+	filter(!is.na(Characters))
 bracket_contestants <- 
 	list.files(brackets) %>% 
+	.[!str_detect(., '~')] %>% 
 	str_replace('.xlsx', '') %>% 
 	str_to_title()
 
@@ -49,6 +52,7 @@ character_outcomes <-
 
 bracket_predictions <- 
 	bracket_predictions %>% 
+	mutate(Characters = if_else(Characters=='Bron', 'Bronn', Characters)) %>% 
 	select(Characters:`Episode 6`) %>% 
 	setNames(c('character', 'episode_3', 'episode_4', 
 		'episode_5', 'episode_6')) %>% 
