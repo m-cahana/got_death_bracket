@@ -40,6 +40,8 @@ time_series <- file.path(results, 'time_series.png')
 
 ```
 
+> Check out the master bracket [here](https://www.dropbox.com/s/n2b86l5clfhu8o0/master.xlsx?dl=0)
+
 ### The Results Are In...
 
 ```{r, echo = FALSE}
