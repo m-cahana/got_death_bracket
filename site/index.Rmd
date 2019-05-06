@@ -49,7 +49,7 @@ leaderboard %>%
 	kable() %>%
 	kable_styling(full_width = T, position = "left")
 ```
-Wayyyyyy too many people survived this episode, at least to my (Prof. Covert's) taste.  So annoyed that we have to listen to Louis' giddy excitement about Cersei getting to be mean for three more episodes!  Also props to Fiona, the other Tom, Michael C, Bethel, Nadia and Sunny for correctly predicting that Arya would ice the Night King.
+Episode 4 recap: Ghost gets banished to a castle up-state, but at least he's still a good dog. Rhaegal gets unceremoniously bolted through the neck, but at least he's gonna boost Dragonstone's dive tourism industry. Brienne gets heart-broken, but at least she got to show off her acting chops. Missandei gets beheaded, but at least her death can rationalize Dany's abrupt pivot to madness
 
 &nbsp;
 &nbsp;
