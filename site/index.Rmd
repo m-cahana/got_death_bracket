@@ -27,7 +27,7 @@ library(knitr)
 library(plotly)
 library(fontawesome)
 library(kableExtra)
-options(knitr.table.format = "html") 
+options(knitr.table.format = "html")
 
 #===========
 # data read in
@@ -45,17 +45,18 @@ time_series <- file.path(results, 'time_series.png')
 ### The Results Are In...
 
 ```{r, echo = FALSE}
-leaderboard %>% 
+leaderboard %>%
 	kable() %>%
 	kable_styling(full_width = T, position = "left")
 ```
-Episode 4 recap, courtsey of Louis (thanks Louis!): Ghost gets banished to a castle up-state, but at least he's still a good dog. Rhaegal gets unceremoniously bolted through the neck, but at least he's gonna boost Dragonstone's dive tourism industry. Brienne gets heart-broken, but at least she got to show off her acting chops. Missandei gets beheaded, but at least her death can rationalize Dany's abrupt pivot to madness.
+
+Episode 5 recap: bound to be a controversial episode, last night we saw the burning of 95% of King's Landing at the hands of the Mad Queen. It was also an episode rife with action for the death bracket. We saw Varys burned alive, an epic Clegane-bowl, Euron and Jaime face off, and finally Jaime and Cersei's tender surrender. While audiences had anticipated that Cersei would be the last great enemy once the Night King vanquished, it is in fact Daenerys who the Starks must inevitably face off in the series finale.
 
 &nbsp;
 &nbsp;
 
-`r scores %>% 
-	setNames(c('Contestant', 'Episode', 'E_Points', 'Points')) %>% 
-	plot_ly(x = ~Episode, y = ~Points, color = ~Contestant, mode = 'lines+markers') %>% 
+`r scores %>%
+	setNames(c('Contestant', 'Episode', 'E_Points', 'Points')) %>%
+	plot_ly(x = ~Episode, y = ~Points, color = ~Contestant, mode = 'lines+markers') %>%
 	layout(xaxis = list(dtick = 1), title = 'Week by Week Rankings')
 `

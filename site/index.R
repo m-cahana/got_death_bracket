@@ -18,5 +18,5 @@ library(rmarkdown)
 # render markdown file
 #===========
 
-render(file.path(root, 'site', 'index.Rmd'), 
+render(file.path(root, 'site', 'index.Rmd'),
 	output_file = file.path(root, 'index.html'))
