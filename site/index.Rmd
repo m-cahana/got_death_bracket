@@ -50,7 +50,7 @@ leaderboard %>%
 	kable_styling(full_width = T, position = "left")
 ```
 
-Episode 5 recap: bound to be a controversial episode, last night we saw the burning of 95% of King's Landing at the hands of the Mad Queen. It was also an episode rife with action for the death bracket. We saw Varys burned alive, an epic Clegane-bowl, Euron and Jaime face off, and finally Jaime and Cersei's tender surrender. While audiences had anticipated that Cersei would be the last great enemy once the Night King vanquished, it is in fact Daenerys who the Starks must inevitably face off in the series finale.
+Episode 6 recap: Game of Thrones has been an integral part of our lives for a decade now, but all good things must come to an end. Last night we saw the end to an era. This might be the last time we as a nation watch something together (besides sports, elections, and a good cat meme). The most shocking part was clearly when Jon actually grew a pair, and stabbed Daenerys before she could even touch the throne she has coveted since birth. Savage. The second big surprise is that sneaky Bran, the most useless of all Starks, now sits on the melted throne. Twas an unsatisfying end for most viewers, but fingers crossed that George RR Martin will finish the books and give us the ending we deserve! 
 
 &nbsp;
 &nbsp;
