@@ -20,7 +20,7 @@ site = $(DIR)/site
 brackets = $(DATA)/brackets
 results = $(DATA)/results
 
-INSTALL := $(shell Rscript $(CDIR)/package_installation.R)
+INSTALL := $(shell Rscript $(code)/package_installation.R)
 
 all : $(DIR)/index.html
 
